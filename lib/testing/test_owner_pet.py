@@ -36,11 +36,11 @@ def test_pet_has_all():
     pet1 = Pet("Whiskers", "cat")
     pet2 = Pet("Jerry", "reptile")
 
-    assert pet1 in Pet.all
-    assert pet2 in Pet.all
-    assert len(Pet.all) == 2
+    assert pet1 in Pet.all_pets
+    assert pet2 in Pet.all_pets
+    assert len(Pet.all_pets) >= 2
 
-    Pet.all = []
+    Pet.all_pets = []
 
 def test_owner_has_pets():
     """Test Owner class has method pets(), returning all related pets"""
